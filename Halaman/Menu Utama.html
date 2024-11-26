@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Produk Sweetheart Flowers</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #4a51b4, #a1d3e2);
+            background-size: cover;
+            background-attachment: fixed;
+            margin: 0;
+            padding: 0;
+        }
+        /* Navbar Style */
+        .navbar {
+            background-color: rgb(165, 195, 224);
+            padding: 10px 15px;
+        }
+        .navbar-brand, .navbar-nav .nav-link {
+            color: white;
+            font-weight: bold;
+        }
+        .navbar-nav .nav-link:hover {
+            color: #c7c4c6;
+        }
+        .search-bar {
+            width: 250px;
+        }
+        .menu-bar {
+            position: fixed;
+            top: 10px;
+            right: 10px;
+            z-index: 1000;
+        }
+        .menu-dropdown {
+            display: none;
+            position: absolute;
+            top: 40px;
+            right: 0;
+            background: #fff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            border-radius: 5px;
+            z-index: 1000;
+        }
+        .menu-dropdown a {
+            text-decoration: none;
+            color: #9fb1c4;
+            padding: 10px 20px;
+            display: block;
+            font-weight: bold;
+        }
+        .menu-dropdown a:hover {
+            background-color: #f8b0d6;
+            color: #fff;
+        }
+        .container {
+            background: rgba(255, 255, 255, 0.8);
+            border-radius: 15px;
+            padding: 20px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            margin-top: 60px;
+        }
+        .product-card {
+            background: #fff;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+            margin-bottom: 20px;
+        }
+        .product-card:hover {
+            transform: scale(1.02);
+        }
+        .product-image {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+        .product-details {
+            padding: 15px;
+        }
+        .product-name {
+            font-size: 1rem;
+            color: #333;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+        .product-price {
+            font-size: 1.2rem;
+            font-weight: bold;
+            color: #d9534f;
+            margin-bottom: 5px;
+        }
+        .product-discount {
+            font-size: 0.9rem;
+            text-decoration: line-through;
+            color: #999;
+            margin-right: 5px;
+        }
+        .product-discount-percent {
+            font-size: 0.9rem;
+            color: #d9534f;
+        }
+        .product-location {
+            font-size: 0.9rem;
+            color: #666;
+            margin-bottom: 5px;
+        }
+        .product-rating {
+            font-size: 0.9rem;
+            color: #f0ad4e;
+        }
+        .product-rating i {
+            color: #f0ad4e;
+        }
+        .product-sold {
+            font-size: 0.9rem;
+            color: #666;
+            margin-top: 5px;
+        }
+        footer {
+            background-color: #9fb1c4;
+            color: #fff;
+            text-align: center;
+            padding: 20px 10px;
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            width: 100%;
+            margin: 0;
+        }
+        footer a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <a class="navbar-brand" href="#">Sweetheart Flowers</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <!-- Search Bar -->
+            <form class="form-inline">
+                <input class="form-control search-bar" type="search" placeholder="Cari produk" aria-label="Search">
+            </form>
+            <!-- Icon Shop and Chat -->
+            <div class="d-flex">
+                <a href="#" class="nav-link">
+                    <i class="fas fa-shopping-cart" style="font-size: 24px; color: white;"></i>
+                </a>
+                <a href="#" class="nav-link">
+                    <i class="fas fa-comments" style="font-size: 24px; color: white;"></i>
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="row">
+            <!-- Contoh Produk 1 -->
+            <div class="col-md-4">
+                <div class="product-card">
+                    <img src="images/elegan.jpg" alt="Buket Pernikahan Elegan" class="product-image">
+                    <div class="product-details">
+                        <div class="product-name">Buket Pernikahan Elegan</div>
+                        <div class="product-price">
+                            <span class="product-discount">Rp 600,000</span>
+                            <span class="product-discount-percent">25%</span>
+                            <br>Rp 450,000
+                        </div>
+                        <div class="product-location">
+                            <i class="fas fa-map-marker-alt"></i> Jakarta Barat
+                        </div>
+                        <div class="product-rating">
+                            <i class="fas fa-star"></i> 4.7 | 8,5RB terjual
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Contoh Produk 2 -->
+            <div class="col-md-4">
+                <div class="product-card">
+                    <img src="images/ceria.jpg" alt="Buket Ulang Tahun Ceria" class="product-image">
+                    <div class="product-details">
+                        <div class="product-name">Buket Ulang Tahun Ceria</div>
+                        <div class="product-price">
+                            <span class="product-discount">Rp 400,000</span>
+                            <span class="product-discount-percent">20%</span>
+                            <br>Rp 320,000
+                        </div>
+                        <div class="product-location">
+                            <i class="fas fa-map-marker-alt"></i> Bandung
+                        </div>
+                        <div class="product-rating">
+                            <i class="fas fa-star"></i> 4.9 | 10RB+ terjual
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Contoh Produk 3 -->
+            <div class="col-md-4">
+                <div class="product-card">
+                    <img src="images/mewah.png" alt="Buket Wisuda Mewah" class="product-image">
+                    <div class="product-details">
+                        <div class="product-name">Buket Wisuda Mewah</div>
+                        <div class="product-price">
+                            <span class="product-discount">Rp 700,000</span>
+                            <span class="product-discount-percent">15%</span>
+                            <br>Rp 595,000
+                        </div>
+                        <div class="product-location">
+                            <i class="fas fa-map-marker-alt"></i> Bekasi
+                        </div>
+                        <div class="product-rating">
+                            <i class="fas fa-star"></i> 5.0 | 10RB+ terjual
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p class="mb-0">@Copyright by 22552011244_Bunga Aliyya Lestari_TIF RP 22 CID.</p>
+    </footer>
+
+    <script>
+        function toggleMenu() {
+            const menu = document.getElementById('menu-dropdown');
+            if (menu.style.display === 'block') {
+                menu.style.display = 'none';
+            } else {
+                menu.style.display = 'block';
+            }
+        }
+    </script>
+</body>
+</html>
